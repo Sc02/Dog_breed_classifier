@@ -1,6 +1,8 @@
 # Dog breed classifier
 
 This project aims to classify images of dogs into their respective breeds using a Convolutional Neural Network (CNN) built with TensorFlow and Keras. The model is trained on a dataset of dog images and can predict the breed of a given dog image.
+Can distinguish between 11 breeds of dogs, namely: Beagle, Boxer, Bulldog, Dachshund, German Shepherd, Golden Retriever, Husky, Labrador Retriever, Poodle, Rottweiler, and Yorkshire Terrier with a *0.92 accuracy* and *0.249 loss*
+(more breeds can be added with sufficient data)
 
 ### Key Features
 

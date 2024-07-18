@@ -1,35 +1,58 @@
-# Dog breed classifier
+# Dog Breed Classifier
 
-This project aims to classify images of dogs into their respective breeds using a Convolutional Neural Network (CNN) built with TensorFlow and Keras. The model is trained on a dataset of dog images and can predict the breed of a given dog image.
-Can distinguish between 11 breeds of dogs, namely: Beagle, Boxer, Bulldog, Dachshund, German Shepherd, Golden Retriever, Husky, Labrador Retriever, Poodle, Rottweiler, and Yorkshire Terrier with a *0.92 accuracy* and *0.249 loss*
-(more breeds can be added with sufficient data)
+This is a Flask web application that allows users to upload an image of a dog and predicts the breed of the dog using a pre-trained model.
 
-### Key Features
+## Features
 
-- **Convolutional Neural Network (CNN)**: Utilizes a CNN architecture with multiple convolutional and pooling layers to extract features from images.
-- **Multi-Class Classification**: Capable of classifying images into one of several dog breeds.
-- **Data Augmentation**: Employs data augmentation techniques to improve model generalization and performance.
-- **Model Training and Evaluation**: Includes scripts for training the model on a dataset and evaluating its performance.
-- **Prediction**: Provides functionality to predict the breed of a dog from a new image using the trained model.
+- Upload an image of a dog
+- Predict the breed of the dog using a pre-trained model
+- Display the predicted breed on the web page
 
-### Technologies Used
+## Prerequisites
 
-- **TensorFlow and Keras**: For building and training the deep learning model.
-- **OpenCV**: For image processing and augmentation.
-- **NumPy**: For numerical operations and data manipulation.
-- **Matplotlib**: For visualizing training progress and results.
+- Python 3.6 or higher
+- pip (Python package installer)
 
-### Dataset
+## Installation
 
-The dataset used for training the model consists of images of dogs categorized by breed. 
-It was found on Kaggle and more images were added to it : https://www.kaggle.com/datasets/khushikhushikhushi/dog-breed-image-dataset
+1. **Clone the Repository**:
 
-### Model Architecture
+git clone https://github.com/Sc02/Dog_breed_classifier
+cd Dog_breed_classifier
 
-The CNN model architecture includes the following layers:
 
-- **Convolutional Layers**: Extract spatial features from the input images.
-- **Max-Pooling Layers**: Reduce the spatial dimensions and retain important features.
-- **Dropout Layers**: Prevent overfitting by randomly setting a fraction of input units to zero during training.
-- **Fully Connected Layers**: Combine the extracted features to make final predictions.
-- **Softmax Output Layer**: Outputs a probability distribution over the dog breed classes.
+2. **Create a Virtual Environment**:
+
+python -m venv venv
+source venv/bin/activate # On Windows, use venv\Scripts\activate
+
+
+3. **Install Dependencies**:
+
+Install the required Python packages using `pip`:
+   
+pip install -r requirements.txt
+
+
+4. **Download the Model File**:
+
+   Ensure the model file `dog_breed_classifier.h5` is in the project directory. If it's not included in the repository, you may need to download it separately and place it in the project directory.
+
+## Running the Application
+
+1. **Start the Flask App**:
+python app.py
+
+
+2. **Access the Application**:
+
+Open your web browser and go to `http://127.0.0.1:5000/` to access the application.
+
+## Project Structure
+
+- **app.py**: The main Flask application file.
+- **requirements.txt**: List of dependencies.
+- **Procfile**: Specifies the command to run the app (used for deployment).
+- **dog_breed_classifier.h5**: The pre-trained model file.
+- **static/**: Directory containing static files (e.g., CSS).
+- **templates/**: Directory containing HTML templates.
